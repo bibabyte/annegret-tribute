@@ -12,31 +12,32 @@
 
 
 body {
+	margin: 0;
+ 	background-color: var(--main-dark);
+ 	color: var(--main-lt);
+/*  	font-family: Helvetica, sans-serif; */
+}
+
+
+#img-div {
+/* 
 	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin: 0em;
-  background-color: var(--main-dark);
-  color: var(--main-lt);
-  font-family: Helvetica, sans-serif;
+	margin: -1em;
+ */
+ 	max-height: 1200px;
+	position: fixed;
+	z-index: -1;
+	
 }
 
-
-
-
-
-@font-face {
-  font-family: heading;
-  src: url('fonts/aladin-regular.ttf');
-  font-family: timeline;
-  src: url('fonts/Montserrat-VariableFont_wght.ttf')
+#img-caption {
+	background-color: var(--main-dark);
+	width: 100 vw;
 }
-
-
-
-
 
 
 
@@ -49,14 +50,9 @@ body {
 	position: sticky;
 	top: 0;
 	background-color: var(--main-dark);
-	z-index: 0;
+	z-index: 1;
 }
 
-/* 
-img {
-	padding: 1em;
-}
- */
 
 
 h1 {
@@ -71,29 +67,26 @@ figcaption {
 	float: right;
 }
 
-#space {
+.space {
 	margin:60vh;
+}
+
+.space2{
+	margin: 30vh;
+	width: 100vw;
 }
 
 
 #tribute-info {
 	display: flex;
  	flex-wrap: wrap; /* Each timeline item is within this box. Without wrapping they scroll out to the right */
+ 	/* flex-direction: column; */
  	width: 100vw; /* Gives the whole section container the full width of the viewport */
  	justify-content: center;  /* Moves boxes within this div to the right */
+	gap: 2em;
 }
  
-.right {
-	justify-content: flex-end; 
-/* 
-width: 100vw;
-position: relative;
-left: 50%;
-right: 50%;
-margin-left: -50vw;
-margin-right: -50wv;
- */
-}
+
  
 
 
@@ -105,19 +98,6 @@ margin-right: -50wv;
   flex-wrap: wrap; /*this line keeps the drop-down text beneath the heading*/
 }
 
-/* 
-.a {
-	justify-content: right;
-}
-
-.b {
-	justify-content: center;
-}
-
-.c {
-	justify-content: left;
-}
- */
 
 .collapsible {
   color: var(--main-dark);
@@ -131,8 +111,6 @@ margin-right: -50wv;
   font-family: dejavu;
   font-weight: 700; 
   justify-content: space-between;
-  align-items: flex-start;
-  margin: 2em 0 0 0;
   opacity: 75%;
   max-height: 2em;
 }
@@ -185,23 +163,39 @@ margin-right: -50wv;
   background-color: var(--contrast-bright);
 }
 
-
+#learn-more {
+	background-color: var(--main-dark);
+	width: 100vw;
+	text-align: center;
+}
 
 
 
 
 
 @media screen and ( max-width: 510px ){
-h1 {
+  h1 {
 	font-size: 1.5em;
-}
+  }
  .timeline {
     margin: 0;
   }
-body {
+  
+/* 
+  #img-div {
 	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed 500px auto;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+  }
+ */
+
+@media screen and ( min-width: 2000px ) {
+	#tribute-info {
+		justify-content: flex-end;
+	}
 }
+
+
+
