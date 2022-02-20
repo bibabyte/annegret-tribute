@@ -1,33 +1,121 @@
 :root{
-  --neutral: #e9ede0;
-  --main-dark: #04615d;
-  --main-med: #81bd8c;
+  --neutral: #dcd5b8;
+  --main-dark: #013328;
+  --main-med: #748b6d;
   --main-lt: #bbd4bf;
-  --sec-med: #b9d846;
+  --sec-med: #cc8b65;
   --sec-lt: #dbe9a2;
-  --contrast-bright: #df8e75;
-  --contrast-dark: #bfb79d;
+  --contrast-bright: #d05663;
+  --contrast-dark: #635048;
 }
+ 
+
+
+body {
+	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0em;
+  background-color: var(--main-dark);
+  color: var(--main-lt);
+  font-family: Helvetica, sans-serif;
+}
+
+
+
+
 
 @font-face {
-  font-family: headings;
-  src: url()
+  font-family: heading;
+  src: url('fonts/aladin-regular.ttf');
+  font-family: timeline;
+  src: url('fonts/Montserrat-VariableFont_wght.ttf')
 }
 
-body{
-  margin: 0em;
-  background-color: var(--main-dark);
-  font-family: 
+
+
+
+
+
+
+#heading {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 0 1.5em ;
+	position: -webkit-sticky;
+position: sticky;
+top: 0;
+background-color: var(--main-dark);
 }
+
+/* 
+img {
+	padding: 1em;
+}
+ */
+
+
+h1 {
+font-family: heading, Times, serif;
+color: var(--main-lt);
+font-weight: 550;
+
+}
+
+figcaption {
+	margin: 0 .5em 0 .5em;
+	float: right;
+}
+
+#space {
+	margin:60vh;
+}
+
+#tribute-info {
+	display: flex;
+ 	flex-wrap: wrap; /* Each timeline item is within this box. Without wrapping they scroll out to the right */
+ 	width: 100vw; /* Gives the whole section container the full width of the viewport */
+ 	/* justify-content: flex-end; */ /* Moves boxes within this div to the right */
+}
+ 
+.right {
+	justify-content: flex-end; 
+/* 
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50wv;
+ */
+}
+ 
+
 
 .timeline {
   margin: 1em;
-  position: relative;
-  float: center;
-  max-width: 500px;
+  display: flex;
+  max-width: 500px; 
+  font-family: timeline;
+  flex-wrap: wrap; /*this line keeps the drop-down text beneath the heading*/
 }
 
+/* 
+.a {
+	justify-content: right;
+}
 
+.b {
+	justify-content: center;
+}
+
+.c {
+	justify-content: left;
+}
+ */
 
 .collapsible {
   color: var(--main-dark);
@@ -37,13 +125,14 @@ body{
   border: none;
   font-size: 2em;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-family: dejavu;
   font-weight: 700; 
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 2em 0 0 0;
   opacity: 75%;
+  max-height: 2em;
 }
 
 .collapsible:after {
@@ -61,19 +150,21 @@ body{
   margin: 0 .5em;
 }
 
- .collapsible:hover {
+.collapsible:hover {
   opacity: 80%;
 }
 
 .content {
   padding: 0 10px;
-  max-width: 480px;
+/*   max-width: 480px; */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: var(--main-lt);
-  margin: 0;
+  background-color: var(--neutral);
+  margin: -1px 0;
   width: 100%;
+  color: var(--contrast-dark);
+  opacity: 80%;
 }
 
 .drop_a {
@@ -89,7 +180,7 @@ body{
 }
 
 .drop_d {
-  background-color: var(--main-lt);
+  background-color: var(--contrast-bright);
 }
 
 
@@ -99,7 +190,16 @@ body{
 
 
 @media screen and ( max-width: 510px ){
-  .timeline {
+h1 {
+	font-size: 1.5em;
+}
+ .timeline {
     margin: 0;
   }
+body {
+	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed 500px auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
