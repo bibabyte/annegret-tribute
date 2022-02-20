@@ -46,9 +46,10 @@ body {
 	text-align: center;
 	padding: 0 1.5em ;
 	position: -webkit-sticky;
-position: sticky;
-top: 0;
-background-color: var(--main-dark);
+	position: sticky;
+	top: 0;
+	background-color: var(--main-dark);
+	z-index: 0;
 }
 
 /* 
@@ -74,11 +75,12 @@ figcaption {
 	margin:60vh;
 }
 
+
 #tribute-info {
 	display: flex;
  	flex-wrap: wrap; /* Each timeline item is within this box. Without wrapping they scroll out to the right */
  	width: 100vw; /* Gives the whole section container the full width of the viewport */
- 	/* justify-content: flex-end; */ /* Moves boxes within this div to the right */
+ 	justify-content: center;  /* Moves boxes within this div to the right */
 }
  
 .right {
