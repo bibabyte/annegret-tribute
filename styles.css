@@ -20,14 +20,6 @@ body {
 
 
 #img-div {
-/* 
-	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed ;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	margin: -1em;
- */
  	max-height: 1200px;
 	position: fixed;
 	z-index: -1;
@@ -170,8 +162,14 @@ figcaption {
 }
 
 
-
-
+figcaption {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: .5em 2em;
+  margin: 0;
+  z-index: 2;
+}
 
 @media screen and ( max-width: 510px ){
   h1 {
@@ -180,7 +178,7 @@ figcaption {
  .timeline {
     margin: 0;
   }
-  
+
 /* 
   #img-div {
 	background: url(images/Annegret_and_Andreas.jpeg) no-repeat left top fixed 500px auto;
